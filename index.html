@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Eagle+Lake&family=Kaisei+Opti&family=Macondo&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/57adc8d76a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -216,16 +219,16 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbySnLagbvEKVPov1L8UHCP3ff6EHRjGl77Z0-HJxElejIMSMWuoj5-IZ2FoOZeMMvqp8Q/exec'
         const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg")
+        const msg = document.getElementById("msg")
 
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    msg.innerHTML="Message sent successfully" 
-                    setTimeout(function(){
-                        msg.innerHTML=""
-                    },5000)
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
                     form.reset()
                 })
                 .catch(error => console.error('Error!', error.message))

@@ -4,6 +4,11 @@
     font-family: 'poppins',sans-serif;
     box-sizing: border-box;
 }
+
+.header-text h1 span {
+    font-family: "Cinzel Decorative", serif;
+    /* change this to any font */
+}
 html{
     scroll-behavior: smooth;
 }
